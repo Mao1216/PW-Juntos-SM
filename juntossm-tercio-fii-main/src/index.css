@@ -1,0 +1,257 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700;800&family=DM+Sans:wght@300;400;500;600&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Core brand: Deep institutional blue */
+    --background: 220 30% 97%;
+    --foreground: 218 60% 8%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 218 60% 8%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 218 60% 8%;
+
+    /* Primary: Deep institutional blue */
+    --primary: 218 72% 22%;
+    --primary-foreground: 0 0% 100%;
+
+    /* Primary dark (for hero) */
+    --primary-deep: 218 80% 10%;
+    --primary-mid: 218 72% 18%;
+
+    /* Secondary: Academic green */
+    --secondary: 163 68% 32%;
+    --secondary-foreground: 0 0% 100%;
+
+    --muted: 218 20% 94%;
+    --muted-foreground: 218 20% 45%;
+
+    --accent: 163 68% 32%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 218 20% 88%;
+    --input: 218 20% 88%;
+    --ring: 218 72% 22%;
+
+    --radius: 0.625rem;
+
+    /* Design tokens */
+    --gradient-hero: linear-gradient(135deg, hsl(218 80% 8%) 0%, hsl(218 70% 16%) 60%, hsl(163 50% 14%) 100%);
+    --gradient-primary: linear-gradient(135deg, hsl(218 72% 22%) 0%, hsl(218 72% 30%) 100%);
+    --gradient-accent: linear-gradient(135deg, hsl(163 68% 28%) 0%, hsl(163 68% 38%) 100%);
+    --gradient-card: linear-gradient(145deg, hsl(0 0% 100%) 0%, hsl(218 20% 98%) 100%);
+    --shadow-sm: 0 2px 8px hsl(218 72% 22% / 0.08);
+    --shadow-md: 0 8px 24px hsl(218 72% 22% / 0.12);
+    --shadow-lg: 0 16px 48px hsl(218 72% 22% / 0.16);
+    --shadow-xl: 0 24px 64px hsl(218 72% 22% / 0.22);
+    --shadow-green: 0 8px 24px hsl(163 68% 32% / 0.3);
+
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 218 30% 26%;
+    --sidebar-primary: 218 72% 22%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 218 20% 94%;
+    --sidebar-accent-foreground: 218 72% 22%;
+    --sidebar-border: 218 20% 91%;
+    --sidebar-ring: 218 72% 50%;
+  }
+
+  .dark {
+    --background: 218 80% 6%;
+    --foreground: 210 40% 95%;
+    --card: 218 72% 10%;
+    --card-foreground: 210 40% 95%;
+    --popover: 218 72% 10%;
+    --popover-foreground: 210 40% 95%;
+    --primary: 163 68% 42%;
+    --primary-foreground: 218 80% 6%;
+    --secondary: 218 50% 22%;
+    --secondary-foreground: 210 40% 95%;
+    --muted: 218 50% 14%;
+    --muted-foreground: 218 20% 65%;
+    --accent: 163 68% 42%;
+    --accent-foreground: 218 80% 6%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 95%;
+    --border: 218 50% 18%;
+    --input: 218 50% 18%;
+    --ring: 163 68% 42%;
+    --sidebar-background: 218 80% 8%;
+    --sidebar-foreground: 210 40% 95%;
+    --sidebar-primary: 163 68% 42%;
+    --sidebar-primary-foreground: 218 80% 6%;
+    --sidebar-accent: 218 50% 14%;
+    --sidebar-accent-foreground: 210 40% 95%;
+    --sidebar-border: 218 50% 14%;
+    --sidebar-ring: 163 68% 42%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: 'DM Sans', sans-serif;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Space Grotesk', sans-serif;
+    font-weight: 700;
+  }
+}
+
+@layer utilities {
+  .gradient-hero {
+    background: var(--gradient-hero);
+  }
+
+  .gradient-primary {
+    background: var(--gradient-primary);
+  }
+
+  .gradient-accent {
+    background: var(--gradient-accent);
+  }
+
+  .gradient-card {
+    background: var(--gradient-card);
+  }
+
+  .shadow-brand {
+    box-shadow: var(--shadow-md);
+  }
+
+  .shadow-brand-lg {
+    box-shadow: var(--shadow-lg);
+  }
+
+  .shadow-brand-xl {
+    box-shadow: var(--shadow-xl);
+  }
+
+  .shadow-green {
+    box-shadow: var(--shadow-green);
+  }
+
+  .font-display {
+    font-family: 'Space Grotesk', sans-serif;
+  }
+
+  .font-body {
+    font-family: 'DM Sans', sans-serif;
+  }
+
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  /* Geometric decorative elements */
+  .geo-dot {
+    @apply w-2 h-2 rounded-full;
+    background: hsl(var(--secondary));
+  }
+
+  .section-label {
+    @apply text-xs font-semibold tracking-[0.2em] uppercase;
+    color: hsl(var(--secondary));
+  }
+}
+
+/* Animations */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(32px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-32px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes pulse-slow {
+  0%, 100% { opacity: 0.4; transform: scale(1); }
+  50% { opacity: 0.7; transform: scale(1.05); }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-8px); }
+}
+
+.animate-fade-in-up {
+  animation: fadeInUp 0.7s ease-out forwards;
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.5s ease-out forwards;
+}
+
+.animate-slide-left {
+  animation: slideInLeft 0.7s ease-out forwards;
+}
+
+.animate-pulse-slow {
+  animation: pulse-slow 4s ease-in-out infinite;
+}
+
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+
+/* Scroll animations */
+.scroll-animate {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.scroll-animate.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.scroll-animate-delay-1 { transition-delay: 0.1s; }
+.scroll-animate-delay-2 { transition-delay: 0.2s; }
+.scroll-animate-delay-3 { transition-delay: 0.3s; }
+.scroll-animate-delay-4 { transition-delay: 0.4s; }
+
+/* Geometric pattern overlay */
+.geo-pattern {
+  background-image: 
+    linear-gradient(hsl(218 72% 22% / 0.05) 1px, transparent 1px),
+    linear-gradient(90deg, hsl(218 72% 22% / 0.05) 1px, transparent 1px);
+  background-size: 48px 48px;
+}
