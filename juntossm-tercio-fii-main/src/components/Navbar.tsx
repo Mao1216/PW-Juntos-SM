@@ -6,7 +6,7 @@ const navLinks = [
   { label: "Quiénes Somos", href: "/#quienes-somos" },
   { label: "Propuestas", href: "/#propuestas" },
   { label: "Equipo", href: "/#equipo" },
-  { label: "Logros", href: "/logros" },
+  { label: "Logros", href: "/#logros" },
   { label: "Noticias", href: "/#noticias" },
   { label: "Banco de Cursos", href: "https://drive.google.com/drive/folders/1Mzi8XjZ3uaigcnlakLILQAM95C78kiRT?usp=sharing", external: true },
   { label: "Formatos y Documentación", href: "https://drive.google.com/drive/folders/1Xt2ITAVQ255TasfY0xgcORvC4k95rKma?usp=sharing", external: true },
