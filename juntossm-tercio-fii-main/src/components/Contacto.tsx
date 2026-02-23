@@ -254,6 +254,7 @@ const handleSubmit = (e: React.FormEvent) => {
                       <Send className="w-5 h-5" />
                       Enviar mensaje
                     </button>
+                    <CheckAnimado />
                   </form>
                 </>
               )}
