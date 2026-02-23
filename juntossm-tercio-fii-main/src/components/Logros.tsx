@@ -5,53 +5,53 @@ const timeline = [
   {
     date: "May 2025",
     icon: Award,
-    title: "Elecciones — Mayoría conseguida",
-    desc: "Juntos SM obtiene la victoria y la representación mayoritaria en el Tercio Estudiantil de la FII con el respaldo de los estudiantes.",
+    title: "Elecciones Ganadas!!",
+    desc: "En sus primeros meses, Juntos SM obtiene la victoria en las elecciones y la representación mayoritaria en el Tercio Estudiantil de la FII con el respaldo de los estudiantes.",
     color: "green",
-  },
-  {
-    date: "Abr 2025",
-    icon: FileCheck,
-    title: "Primera sesión de gestión",
-    desc: "Presentación formal del plan de trabajo ante el Decanato. Aprobación de los primeros acuerdos de mejora académica.",
-    color: "blue",
   },
   {
     date: "May 2025",
-    icon: Users,
-    title: "Programa de tutorías lanzado",
-    desc: "Inicio del programa de mentorías entre pares con 45 estudiantes tutores capacitados en 8 cursos críticos.",
-    color: "green",
-  },
-  {
-    date: "Jun 2025",
-    icon: TrendingUp,
-    title: "Primer informe de gestión",
-    desc: "Rendición pública de cuentas: 3 propuestas en ejecución, 2 compromisos cumplidos, 1 convenio empresarial firmado.",
+    icon: FileCheck,
+    title: "Horario de laboratorios libres de informática",
+    desc: "Por 1ra vez en la FII se logra establecer horarios libres para el ingreso de estudiantes de la FII a los laboratorios de informática, permitiendo el avance y desarrollo académico.",
     color: "blue",
   },
   {
-    date: "Ago 2025",
+    date: "Jul 2025",
+    icon: Users,
+    title: "Burrito CONEII PIURA 2025",
+    desc: "Por 1ra vez en nuestra facultad se gestiona el apoyo para que +45 estudiantes puedan ir a costo económico al Congreso Nacional de estudiantes de Ingeniería Industrial, logrando una representación grande de estudiantes.",
+    color: "green",
+  },
+  {
+    date: "Jul 2025",
+    icon: TrendingUp,
+    title: "Implementación de Tomacorrientes",
+    desc: "Gracias a nuestra gestión se logró implementar, en una primera etapa, tomacorrientes en los exteriores de la sala de lectura de la biblioteca. En una segunda etapa se implementará en las mesas de la sala de lectura.",
+    color: "blue",
+  },
+  {
+    date: "OCT 2025",
     icon: CheckCircle2,
-    title: "Mejoras de infraestructura aprobadas",
-    desc: "Renovación del laboratorio de cómputo con 30 equipos nuevos y actualización de software especializado.",
+    title: "Asesoria y acompañamiento Beca Permanencia 2025",
+    desc: "Por 1ra vez se hace asesorias, formatos y acompañamiento de inicio a fin a los estudiantes de la FII postulantes a la beca permanencia 2025.",
     color: "green",
   },
   {
     date: "En curso",
     icon: Calendar,
-    title: "Plan de trabajo activo",
-    desc: "Continuamos ejecutando el plan comprometido. Seguimiento mensual disponible en nuestros canales oficiales.",
+    title: "Matricula verano (examen de aplazados)",
+    desc: "1ra vez que estudiantes de la FII de las 3 escuelas, que dieron el examen de aplazados, logran ser matriculados en el ciclo verano. Acá nadie se queda solo, el primer tercio que está siempre junto a ti.",
     color: "blue",
     active: true,
   },
 ];
 
 const stats = [
-  { value: "12+", label: "Propuestas en ejecución" },
-  { value: "45", label: "Tutores capacitados" },
-  { value: "3", label: "Convenios gestionados" },
-  { value: "100%", label: "Informes publicados" },
+  { value: "+20", label: "Acciones y proyectos ejecutados" },
+  { value: "+50", label: "miembros" },
+  { value: "1", label: "Convenios gestionados" },
+  { value: "100%", label: "SiempreJuntos" },
 ];
 
 const Logros = () => {
@@ -84,19 +84,18 @@ const Logros = () => {
       <div className="container max-w-7xl mx-auto px-6">
         {/* Header */}
         <div className="max-w-3xl mb-20">
-          <p className="section-label mb-4 scroll-animate">Gestión transparente</p>
+          <p className="section-label mb-4 scroll-animate">Gestión verdadera</p>
           <h2 className="font-display font-black text-foreground text-4xl md:text-5xl leading-tight mb-6 scroll-animate scroll-animate-delay-1">
             Logros y resultados
           </h2>
           <p className="font-body text-muted-foreground text-lg leading-relaxed scroll-animate scroll-animate-delay-2 mb-6">
-            Lo que prometemos, lo cumplimos. Aquí está el registro de nuestra gestión,
-            paso a paso, con fechas y resultados concretos.
+            Lo que prometemos, lo cumplimos. Aquí está el registro de nuestra gestión con resultados concretos. Les presentamos algunos de nuestros logros:
           </p>
           <a
             href="/logros"
             className="inline-flex items-center gap-2 font-display font-semibold text-sm text-primary hover:text-secondary transition-colors scroll-animate scroll-animate-delay-2 group"
           >
-            Ver línea de tiempo completa
+            Ver todos nuestros logros
             <ChevronRight className="w-4 h-4 group-hover:translate-x-0.5 transition-transform" />
           </a>
         </div>

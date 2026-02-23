@@ -7,74 +7,244 @@ const timeline = [
   {
     date: "May 2025",
     icon: Award,
-    title: "Elecciones — Mayoría conseguida",
-    desc: "Juntos SM obtiene la victoria y la representación mayoritaria en el Tercio Estudiantil de la FII con el respaldo de los estudiantes.",
+    title: "Elecciones ganadas!!",
+    desc: "En sus primeros meses, Juntos SM obtiene la victoria en las elecciones y la representación mayoritaria en el Tercio Estudiantil de la FII con el respaldo de los estudiantes.",
     color: "green",
   },
   {
-    date: "Mar 2025",
-    icon: Target,
-    title: "Conformación del equipo de gestión",
-    desc: "Se estructura el equipo de trabajo con responsables por área: Académico, Bienestar, Infraestructura y Comunicaciones.",
-    color: "blue",
-  },
-  {
-    date: "Abr 2025",
     icon: FileCheck,
-    title: "Primera sesión de gestión",
-    desc: "Presentación formal del plan de trabajo ante el Decanato. Aprobación de los primeros acuerdos de mejora académica.",
+    title: "laboratorios libres",
+    desc: "Por 1ra vez en la FII se logra establecer horarios libres para el ingreso de estudiantes de la FII a los laboratorios de informática, permitiendo el avance y desarrollo académico.",
+    color: "blue",
+  },
+  {
+
+       icon: TrendingUp,
+    title: "Implementación de Tomacorrientes",
+    desc: "Gracias a nuestra gestión se logró implementar, en una primera etapa, tomacorrientes en los exteriores de la sala de lectura de la biblioteca. En una segunda etapa se implementará en las mesas de la sala de lectura.",
     color: "green",
   },
   {
-    date: "Abr 2025",
+
     icon: BookOpen,
-    title: "Lanzamiento del banco de materiales digitales",
-    desc: "Más de 50 recursos académicos organizados por curso disponibles para todos los estudiantes de la FII.",
-    color: "blue",
+    title: "Banco de apuntes y cursos",
+    desc: "1er drive de acceso libre a los estudiantes de la FII con contenido académico de los cursos impartidos desde el 2023",
+    color: "bluee",
   },
   {
-    date: "May 2025",
+   
     icon: Users,
-    title: "Programa de tutorías lanzado",
-    desc: "Inicio del programa de mentorías entre pares con 45 estudiantes tutores capacitados en 8 cursos críticos.",
+    title: "Banco de formatos y documentación",
+    desc: "1ra vez en la FII que se crea un drive con los formatos y documentación necesaria para los distintos trámites en nuestra facultad.",
     color: "green",
   },
   {
-    date: "May 2025",
+   
     icon: Briefcase,
-    title: "Convenio de salud mental firmado",
-    desc: "Acuerdo con el Departamento de Bienestar para atención psicológica gratuita y confidencial para estudiantes de la FII.",
+    title: "Instructivos para procedimientos",
+    desc: "1ra vez en la FII que se crea instructivos claros y completos para cada procedimiento de trámites o acciones como matrícula, rectificación, aplazados, etc.",
     color: "blue",
   },
   {
-    date: "Jun 2025",
+ 
     icon: TrendingUp,
-    title: "Primer informe de gestión",
-    desc: "Rendición pública de cuentas: 3 propuestas en ejecución, 2 compromisos cumplidos, 1 convenio empresarial firmado.",
+    title: "Mejor biblioteca + wifi",
+    desc: "Mejoramiento de la conectividades de la biblioteca de la facultad incrementando el ancho de banda y ampliando la capacidad de usuarios conectados.",
     color: "green",
   },
   {
-    date: "Ago 2025",
+   
     icon: CheckCircle2,
-    title: "Mejoras de infraestructura aprobadas",
-    desc: "Renovación del laboratorio de cómputo con 30 equipos nuevos y actualización de software especializado.",
+    title: "Biblioteca Oyón",
+    desc: "Apoyo de marketing, difusión, logística y recepción de libros para donarlos e implementar la biblioteca de las sedes de la UNMSM en Oyón.",
     color: "blue",
   },
   {
-    date: "En curso",
+  
+    icon: BookOpen,
+    title: "Plan de estudios 2026",
+    desc: "Participación constante de nuestros estudiantes representantes antes los comités de gestión de las escuelas profesionales para el mejoramiento de los planes curriculares en miras del plan 2026.",
+    color: "green",
+  
+  },
+  {
+  
+    icon: TrendingUp,
+    title: "Jabón líquido",
+    desc: "Gracias a nuestra gestión se ha logrado un incremento en el abastecimiento de jabón líquido en los baños de la facultad, mejorando la higiene y salud de los estudiantes.",
+    color: "blue",
+    
+  },
+    {
+   
+    icon: CheckCircle2,
+    title: "Asesoria y acompañamiento Beca Permanencia 2025",
+    desc: "Por 1ra vez se hace asesorias, formatos y acompañamiento de inicio a fin a los estudiantes de la FII postulantes a la beca permanencia 2025.",
+    color: "green",
+  },
+    {
+    
     icon: Calendar,
-    title: "Plan de trabajo activo",
-    desc: "Continuamos ejecutando el plan comprometido. Seguimiento mensual disponible en nuestros canales oficiales.",
+    title: "Semana FII 2025",
+    desc: "1ra Olimpiadas FII, gracias a nuestra gestión se logró institucionalizar las 1ra Olimpiadas FII en un formato inicial que incluyó deportes como Fútbol masculino, fútbol femenino, voley mixto, Basquet, ajedrez, maratón y ginkana. Buscaremos implementar para las 2da Olimpiadas FII los deportes de carrera de bicicletas, natación, atletismo y balón mano.",
+    color: "blue",
+
+  },
+    {
+    
+    icon: Users,
+    title: "Burrito CONEII PIURA 2025",
+    desc: "Por 1ra vez en nuestra facultad se gestiona el apoyo para que +45 estudiantes puedan ir a costo económico al Congreso Nacional de estudiantes de Ingeniería Industrial, logrando una representación grande de estudiantes.",
+    color: "green",
+  },
+    {
+    
+    icon: TrendingUp,
+    title: "Mejores Luminarias",
+    desc: "Gracias a nuestra gestión, se dio el mantenimiento respectivo a todas las luminarias de los ambientes de estudio (aulas y laboratorios), mejorando así la calidad académica y el ambiente de estudio para los estudiantes y docentes. (Acción que fue reconocida y celebrada por distintos docentes de la facultad)",
+    color: "blue",
+
+  },
+    {
+    
+    icon: Users,
+    title: "Navidad FII",
+    desc: "Se gestionó una chocolatada FII que benefició a más de 500 estudiantes de nuestra facultad. Además, se contó con un sorteo de canastas en vivo en el evento. Se armó un arbol de navidad en el pabellón de aulas de nuestra facultad.",
+    color: "green",
+
+  },
+    {
+    
+    icon: CheckCircle2,
+    title: " - gasto en extensión universitaria",
+    desc: "Gracias a nuestra intervención en consejo de facultad, se logró modificar un inciso de los lineamientos del dictado de clases 2025-II. De esta forma se estableció exhortar a los docentes a no incurrir a los estudiantes en gastos mayores para los trabajos de extensión universitaria, logrando que los alumnos se vean menos perjudicados en sus finanzas y beneficiando a más de 1000 estudiantes. Una situación que perjudicó a estudiantes ciclo tras ciclo, fue mejorada.",
+    color: "blue",
+  
+  },
+    {
+
+    icon: Calendar,
+    title: "Entrega de notas",
+    desc: "Gracias a nuestra intervención en consejo de facultad, se logró crear un inciso en los lineamientos del dictado de clases 2025-II. De esta forma se estableció un primer cronograma de entrega de notas para que los docentes otorgen, obligatoriamente, las notas a los estudiantes en fechas oportunas. Este era un problema muy recurrente en la facultad que perjudicaba directamente a los estudiantes al no saber su situación académica hasta finalizado el curso",
+    color: "green",
+ 
+  },
+    {
+  
+    icon: CheckCircle2,
+    title: "NO MÁS ABUSOS",
+    desc: "Gestionamos, apoyamos y dimos seguimiento a las quejas de los estudiantes y a lograr verdaderas soluciones ante docentes que tenian un trato abusivo o malo a los estudiantes, estuvimos juntos en esto, sin miedo y logrando lo impensable.",
+    color: "blue",
+  
+  },
+    {
+   
+    icon: Users,
+    title: "Juntos en la matrícula y rectificación",
+    desc: "Apoyo constante y orientación a +900 estudiantes de las 3 escuelas en los procesos de matrícula y rectificación. Se logró aperturar cursos e incrementar vacantes en el ciclo regular, apoyando a los estudiantes de todas las bases.",
+    color: "green",
+    
+  },
+
+    {
+   
+    icon: TrendingUp,
+    title: "Academia de Ingenieros de Excelencia China - Perú",
+    desc: "Apoyo de marketing y creación del logo de la Academia de Ingenieros de Excelencia China - Perú.",
+    color: "blue",
+  
+  },
+
+
+    {
+   
+    icon: Calendar,
+    title: "Cursos de verano 2025",
+    desc: "Apoyo constante durante la matrícula y apertura de cursos en el verano 2025. Se dio un seguimiento y apoyo constante a +400 estudiantes diariamente, estando siempre junto a ellos hasta el final. Se aperturó 10 cursos y +10 secciones para los estudiantes de las 3 escuelas y todas las bases, nadie se quedó afuera!",
+    color: "green",
+  
+  },
+     {
+  
+    icon: BookOpen,
+    title: "Mínimo verano 2025",
+    desc: "Se logró reducir durante el proceso de matrícula de verano 2025-0, el mínimo de estudiantes para que una sección siga aperturada (de 30 a 25), logrando que se reduzca el número de secciones cerradas y permitiendo a +300 estudiantes puedan seguir en con su avance académico.",
+    color: "blue",
+  
+  },
+      {
+   
+    icon: CheckCircle2,
+    title: "VOZ CLARA",
+    desc: "Pronunciamiento en comunicados ante diferentes situaciones sociales de nuestro país y nuestra universidad.",
     color: "green",
     active: true,
   },
+      {
+   
+    icon: TrendingUp,
+    title: "Deporte FII",
+    desc: "Apoyo concurrente en la difusión de convocatorias para representar a la facultad en distintas disciplinas deportivas, así como apoyo para brindar bebidas a nuestros deportistas.",
+    color: "blue",
+    active: true,
+  },
+      {
+   
+    icon: Users,
+    title: "Seguridad ante todo",
+    desc: "Solicitamos y gestionamos constante y oportunamente la programación de actividades virtuales para estudiantes, docentes y personal administrativo de la facultad ante los peligros que amenazan la integridad y seguridad de la comunidad FII ocacionados por las problemáticas sociales como paros de transportistas, protestas contra el gobierno, marchas sociales, etc.",
+    color: "green",
+    active: true,
+  },
+ 
+    {
+    date: "En curso",
+    icon: CheckCircle2,
+    title: "Todos con matrícula!",
+    desc: "1ra vez que gracias a nuestra gestión, se logra matricular en verano a los estudiantes que dieron examen de aplazados en ciclo regular, beneficiando y apoyando a +50 estudiantes. Recuerden, no están solos, estamos SiempreJuntos",
+    color: "blue",
+    active: true,
+  },
+    {
+    date: "En curso",
+    icon: BookOpen,
+    title: "Inglés para egresados",
+    desc: "Se apoyó y gestionó el dictado de inglés intermedio para los egresados de nuestra facultad y de esta forma mejorar sus competencias laborales ya académicas. Siempre Juntos, hasta de egresados.",
+    color: "green",
+    active: true,
+  },
+     {
+    date: "En curso",
+    icon: TrendingUp,
+    title: "Convenio SENATI - FII UNMSM",
+    desc: "Se ha iniciado las conversaciones con las autoridades para reactivar el convenio de apoyo interinstitucional entre SENATI y la FII, permitiendo beneficiarnos del uso de laboratorios modernos en las instalaciones de SENATI, entre otros beneficios.",
+    color: "blue",
+    active: true,
+  },
+      {
+    date: "En curso",
+    icon: TrendingUp,
+    title: "Laboratorio de textiles",
+    desc: "Se ha iniciado con la rehabilitación del laboratorio de telares de la escuela de ingeniería textil, después de muchos años de abandono.",
+    color: "green",
+    active: true,
+  },
+        {
+    date: "En curso",
+    icon: TrendingUp,
+    title: "Mantenimiento Laboratorio de textiles",
+    desc: "Se ha iniciado gracias a la gestión del ing. Vidal y nuestra consejera Diana Silva, el mantenimiento de los equipos de los laboratorios después de muchos años de abandono.",
+    color: "blue",
+    active: true,
+  },
+
 ];
 
 const stats = [
-  { value: "12+", label: "Propuestas en ejecución" },
-  { value: "45", label: "Tutores capacitados" },
-  { value: "3", label: "Convenios gestionados" },
-  { value: "100%", label: "Informes publicados" },
+  { value: "+20", label: "Propuestas ejecutadas" },
+  { value: "+50", label: "Miembros" },
+  { value: "1", label: "Convenios gestionados" },
+  { value: "100%", label: "Siempre Juntos" },
 ];
 
 const LogrosPage = () => {
@@ -91,13 +261,12 @@ const LogrosPage = () => {
             Volver al inicio
           </Link>
 
-          <p className="section-label mb-4">Gestión transparente</p>
+          <p className="section-label mb-4">Gestión verdadera</p>
           <h1 className="font-display font-black text-foreground text-4xl md:text-5xl leading-tight mb-6">
             Logros y resultados
           </h1>
           <p className="font-body text-muted-foreground text-lg leading-relaxed mb-16 max-w-3xl">
-            Lo que prometemos, lo cumplimos. Aquí está el registro completo de nuestra gestión,
-            paso a paso, con fechas y resultados concretos.
+            Lo que prometemos, lo cumplimos. Aquí está el registro completo de nuestra gestión y resultados concretos.
           </p>
 
           {/* Stats */}
@@ -116,7 +285,7 @@ const LogrosPage = () => {
           </div>
 
           {/* Timeline */}
-          <h2 className="font-display font-bold text-foreground text-2xl mb-10">Línea de tiempo</h2>
+          <h2 className="font-display font-bold text-foreground text-2xl mb-10">todos los logros</h2>
           <div className="relative">
             <div
               className="absolute left-6 top-0 bottom-0 w-px"
