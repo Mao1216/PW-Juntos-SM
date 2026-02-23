@@ -22,12 +22,15 @@ const FloatingContact = () => {
             ¿Tienes alguna consulta? Escríbenos directamente.
           </p>
           <a
-            href="mailto:juntos.unmsm@gmail.com"
-            onClick={() => setOpen(false)}
-            className="block w-full text-center gradient-accent text-primary-foreground font-display font-bold text-sm py-3 rounded-xl shadow-green hover:opacity-90 transition-opacity"
-          >
-            Enviar correo
-          </a>
+  href="https://whatsapp.com/channel/0029VbAs0mvEKyZJUS1SUO29"
+  target="_blank"
+  rel="noopener noreferrer"
+  className="block"
+>
+  <button className="w-full gradient-accent text-primary-foreground font-display font-bold px-6 py-3 rounded-xl shadow-green hover:opacity-90 transition-all">
+    Únete al canal de WhatsApp
+  </button>
+</a>
           <a
             href="#contacto"
             onClick={() => setOpen(false)}

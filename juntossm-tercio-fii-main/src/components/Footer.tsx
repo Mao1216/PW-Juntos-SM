@@ -1,5 +1,7 @@
-import { Mail, Instagram, Facebook, Twitter, ExternalLink } from "lucide-react";
+import { Mail, Facebook, ExternalLink, MessageCircle } from "lucide-react";
+import { FaTiktok } from "react-icons/fa";
 import juntoslogo from "@/assets/JUNTOS_LOGO.png";
+
 const Footer = () => {
   return (
     <footer
@@ -13,39 +15,65 @@ const Footer = () => {
           <div>
             <div className="flex items-center gap-3 mb-4">
               <div className="w-12 h-12 object-contain">
-                <span className="text-primary-foreground font-display font-black text-base"><img src={juntoslogo} alt="" /></span>
+                <span className="text-primary-foreground font-display font-black text-base">
+                  <img src={juntoslogo} alt="" />
+                </span>
               </div>
               <div>
-                <span className="font-display font-bold text-primary-foreground text-lg leading-none block">JUNTOS SM</span>
-                <span className="text-primary-foreground/50 text-xs tracking-widest uppercase">Tercio Estudiantil · FII</span>
+                <span className="font-display font-bold text-primary-foreground text-lg leading-none block">
+                  JUNTOS SM
+                </span>
+                <span className="text-primary-foreground/50 text-xs tracking-widest uppercase">
+                  Tercio Estudiantil · FII
+                </span>
               </div>
             </div>
             <p className="font-body text-primary-foreground/60 text-sm leading-relaxed">
               Representación estudiantil responsable, organizada y comprometida con el desarrollo de la Facultad de Ingeniería Industrial.
             </p>
+
             {/* Social links */}
             <div className="flex gap-3 mt-5">
-              {[
-                { icon: Instagram, label: "Instagram" },
-                { icon: Facebook, label: "Facebook" },
-                { icon: Twitter, label: "Twitter" },
-                { icon: Mail, label: "Correo" },
-              ].map(({ icon: Icon, label }) => (
-                <a
-                  key={label}
-                  href="#"
-                  className="w-9 h-9 rounded-lg border border-primary-foreground/20 flex items-center justify-center text-primary-foreground/60 hover:text-primary-foreground hover:border-secondary hover:bg-secondary/10 transition-all duration-200"
-                  title={label}
-                >
-                  <Icon className="w-4 h-4" />
-                </a>
-              ))}
+              {/* TikTok */}
+              <a
+                href="https://www.tiktok.com/@juntos_sm?is_from_webapp=1&sender_device=pc"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-9 h-9 rounded-lg border border-primary-foreground/20 flex items-center justify-center text-primary-foreground/60 hover:text-primary-foreground hover:border-secondary hover:bg-secondary/10 transition-all duration-200"
+                title="TikTok"
+              >
+                <FaTiktok className="w-4 h-4" />
+              </a>
+
+              {/* Facebook */}
+              <a
+                href="https://www.facebook.com/JuntosTercioEstudiantilFII"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-9 h-9 rounded-lg border border-primary-foreground/20 flex items-center justify-center text-primary-foreground/60 hover:text-primary-foreground hover:border-secondary hover:bg-secondary/10 transition-all duration-200"
+                title="Facebook"
+              >
+                <Facebook className="w-4 h-4" />
+              </a>
+
+              {/* WhatsApp Canal */}
+              <a
+                href="https://whatsapp.com/channel/0029VbAs0mvEKyZJUS1SUO29"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-9 h-9 rounded-lg border border-primary-foreground/20 flex items-center justify-center text-primary-foreground/60 hover:text-primary-foreground hover:border-secondary hover:bg-secondary/10 transition-all duration-200"
+                title="Canal de WhatsApp"
+              >
+                <MessageCircle className="w-4 h-4" />
+              </a>
             </div>
           </div>
 
           {/* Navigation */}
           <div>
-            <h4 className="font-display font-bold text-primary-foreground text-sm tracking-widest uppercase mb-5">Secciones</h4>
+            <h4 className="font-display font-bold text-primary-foreground text-sm tracking-widest uppercase mb-5">
+              Secciones
+            </h4>
             <div className="flex flex-col gap-3">
               {[
                 { label: "Quiénes Somos", href: "#quienes-somos" },
@@ -68,20 +96,30 @@ const Footer = () => {
 
           {/* Contact info */}
           <div>
-            <h4 className="font-display font-bold text-primary-foreground text-sm tracking-widest uppercase mb-5">Contacto</h4>
+            <h4 className="font-display font-bold text-primary-foreground text-sm tracking-widest uppercase mb-5">
+              Contacto
+            </h4>
             <div className="flex flex-col gap-3">
               <div className="flex items-start gap-3">
                 <Mail className="w-4 h-4 text-secondary mt-0.5 shrink-0" />
                 <div>
-              <p className="font-body text-primary-foreground/80 text-sm">juntos.unmsm@gmail.com</p>
-                  <p className="font-body text-primary-foreground/40 text-xs">Correo oficial de Juntos SM</p>
+                  <p className="font-body text-primary-foreground/80 text-sm">
+                    juntos.unmsm@gmail.com
+                  </p>
+                  <p className="font-body text-primary-foreground/40 text-xs">
+                    Correo oficial de Juntos SM
+                  </p>
                 </div>
               </div>
               <div className="flex items-start gap-3">
                 <ExternalLink className="w-4 h-4 text-secondary mt-0.5 shrink-0" />
                 <div>
-                  <p className="font-body text-primary-foreground/80 text-sm">Facultad de Ingeniería Industrial</p>
-                  <p className="font-body text-primary-foreground/40 text-xs">Universidad Nacional Mayor de San Marcos</p>
+                  <p className="font-body text-primary-foreground/80 text-sm">
+                    Facultad de Ingeniería Industrial
+                  </p>
+                  <p className="font-body text-primary-foreground/40 text-xs">
+                    Universidad Nacional Mayor de San Marcos
+                  </p>
                 </div>
               </div>
             </div>
@@ -112,4 +150,4 @@ const Footer = () => {
   );
 };
 
-export default Footer;
+export default Footer; 

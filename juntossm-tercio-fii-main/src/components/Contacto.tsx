@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 import { Send, User, Mail, MessageSquare, CheckCircle2 } from "lucide-react";
 import emailjs from "@emailjs/browser";
-import CheckAnimado from "./checkanimado";
+import CheckAnimado from "./CheckAnimado";
 
 const Contacto = () => {
   const sectionRef = useRef<HTMLDivElement>(null);
@@ -124,9 +124,9 @@ const handleSubmit = (e: React.FormEvent) => {
             <div className="bg-card border border-border rounded-2xl p-8 shadow-brand-lg">
               {submitted ? (
                 <div className="text-center py-12">
-                  <div className="w-16 h-16 gradient-accent rounded-full flex items-center justify-center mx-auto mb-5 shadow-green">
-                    <CheckCircle2 className="w-8 h-8 text-primary-foreground" />
-                  </div>
+                 <div className="flex justify-center mb-5">
+  <CheckAnimado />
+</div>
                   <h3 className="font-display font-bold text-foreground text-2xl mb-3">¡Mensaje enviado!</h3>
                   <p className="font-body text-muted-foreground">
                     Tu mensaje será enviado a nuestro correo. Nos pondremos en contacto contigo pronto.
@@ -254,7 +254,7 @@ const handleSubmit = (e: React.FormEvent) => {
                       <Send className="w-5 h-5" />
                       Enviar mensaje
                     </button>
-                    <CheckAnimado />
+                  
                   </form>
                 </>
               )}
