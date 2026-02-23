@@ -64,11 +64,11 @@ const QuienesSomos = () => {
             ¿Quiénes somos?
           </h2>
           <p className="font-body text-muted-foreground text-lg leading-relaxed scroll-animate scroll-animate-delay-2">
-            <strong className="text-foreground">Juntos SM</strong> es el Tercio Estudiantil Mayoría de la Facultad de Ingeniería Industrial.
-            Nacemos de la necesidad de una representación organizada, propositiva y cercana a las realidades del estudiante universitario. Iniciamos
-            nuestra salida pública a inicios del año 2025, siendo que en abril de dicho año, se marcó el inicio de nuestra primera participación para elecciones, 
-            y el 27 de mayo resultamos ganadores de las elecciones estudiantiles. Recibimos la confianza de cientos de estudiantes y nosotros con la firme promesa 
-            de ayudarlos, representarlos y estar siempre juntos. 
+            <strong className="text-foreground">Juntos SM</strong> es el Tercio Estudiantil Mayoría de la Facultad de Ingeniería Industrial. Nacemos a partir de la necesidad de construir una representación organizada, propositiva y verdaderamente cercana a las realidades del estudiante universitario.
+
+Iniciamos nuestra salida pública a inicios del año 2025. En abril de ese mismo año marcamos el comienzo de nuestra primera participación electoral y, el 27 de mayo, obtuvimos la victoria en las elecciones estudiantiles.
+
+Recibimos la confianza de cientos de estudiantes, asumiendo con responsabilidad y firmeza el compromiso de representarlos, apoyarlos y trabajar siempre a su lado.
           </p>
         </div>
 
