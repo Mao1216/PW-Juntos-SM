@@ -4,71 +4,71 @@ import { User, LinkedinIcon } from "lucide-react";
 const team = [
   {
     name: "Manuel Olin",
-    role: "Líder y fundador / Consejero de Facultad FII",
-    desc: "Liderazgo estudiantil con enfoque en gestión académica y bienestar.",
+    role: "Consejero de Facultad FII",
+    desc: "Presidente y fundador de Juntos SM. Estudiante de la EPII B23",
     initials: "AS",
     color: "blue",
   },
   {
     name: "Diana Silva",
     role: "Consejera de Facultad FII",
-    desc: "Coordinación institucional y comunicación con autoridades de la facultad.",
+    desc: "Representante estudiantil y de Juntos SM. Estudiante de la EPITC B23",
     initials: "CM",
     color: "green",
   },
   {
     name: "Jordan Tapullima",
     role: "Consejero de Facultad FII",
-    desc: "Seguimiento a propuestas curriculares y programas de apoyo estudiantil.",
+    desc: "Representante estudiantil y de Juntos SM. Estudiante de la EPISST B24",
     initials: "VT",
     color: "blue",
   },
   {
     name: "Maykol Tucto",
-    role: "Co líder",
-    desc: "Atención a necesidades del estudiante y gestión de recursos de apoyo.",
+    role: "Miembro del comité ejecutivo",
+    desc: "Vicepresidente de Juntos SM, miembro del área de proyectos. Estudiante de la EPII B25.",
     initials: "DQ",
     color: "green",
   },
   {
     name: "Rogger Villegas",
-    role: "Co líder",
-    desc: "Estrategia de información, redes y visibilidad del tercio estudiantil.",
+    role: "Miembro del comité ejecutivo",
+    desc: "Gerente de proyectos de Juntos SM. Estudiante de la EPITC B24.",
     initials: "LP",
     color: "blue",
   },
   {
-    name: "Manuel Rivas",
-    role: "Infraestructura",
-    desc: "Gestión de solicitudes de mejoras en laboratorios y espacios académicos.",
+    name: "Dhafne Nuñez",
+    role: "Miembro del comité ejecutivo",
+    desc: "Gerente de proyectos de Juntos SM. Estudiante de la EPITC B23.",
     initials: "MR",
     color: "green",
   },
   {
-    name: "Manuel Rivas",
-    role: "Infraestructura",
-    desc: "Gestión de solicitudes de mejoras en laboratorios y espacios académicos.",
+    name: "Angel Zelaya",
+    role: "Miembro del comité ejecutivo",
+    desc: "Gerente de Deporte y cultura de Juntos SM. Estudiante de la EPISST B23.",
+    initials: "MR",
+    color: "blue",
+  },
+  {
+    name: "Dora",
+    role: "Miembro del comité ejecutivo",
+    desc: "Gerente de finanzas y logística de Juntos SM. Estudiante de la EPISST B24.",
     initials: "MR",
     color: "green",
   },
   {
-    name: "Manuel Rivas",
-    role: "Infraestructura",
-    desc: "Gestión de solicitudes de mejoras en laboratorios y espacios académicos.",
+    name: "X",
+    role: "Miembro del comité ejecutivo",
+    desc: "Gerente de educación de Juntos SM. Estudiante de la EPI B25.",
     initials: "MR",
-    color: "green",
+    color: "blue",
   },
   {
-    name: "Manuel Rivas",
-    role: "Infraestructura",
-    desc: "Gestión de solicitudes de mejoras en laboratorios y espacios académicos.",
-    initials: "MR",
-    color: "green",
-  },
-  {
-    name: "Manuel Rivas",
-    role: "Infraestructura",
-    desc: "Gestión de solicitudes de mejoras en laboratorios y espacios académicos.",
+    name: "Kassandra Mejia",
+    role: "Miembro del comité ejecutivo",
+    desc: "Gerente de Marketing y comunicaciones de Juntos SM. Estudiante de la EPII B23.",
     initials: "MR",
     color: "green",
   },
@@ -101,7 +101,7 @@ const Equipo = () => {
         <div className="max-w-3xl mb-20">
           <p className="section-label mb-4 scroll-animate">Las personas detrás</p>
           <h2 className="font-display font-black text-foreground text-4xl md:text-5xl leading-tight mb-6 scroll-animate scroll-animate-delay-1">
-            Nuestro equipo
+            Comité ejecutivo 
           </h2>
           <p className="font-body text-muted-foreground text-lg leading-relaxed scroll-animate scroll-animate-delay-2">
             Un equipo multidisciplinario, comprometido y preparado para representar con responsabilidad

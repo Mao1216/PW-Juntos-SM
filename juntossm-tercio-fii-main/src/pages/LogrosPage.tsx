@@ -168,7 +168,7 @@ const timeline = [
   
     icon: BookOpen,
     title: "Mínimo verano 2025",
-    desc: "Se logró reducir durante el proceso de matrícula de verano 2025-0, el mínimo de estudiantes para que una sección siga aperturada (de 30 a 25), logrando que se reduzca el número de secciones cerradas y permitiendo a +300 estudiantes puedan seguir en con su avance académico.",
+    desc: "Se logró reducir durante el proceso de matrícula de verano 2025-0, el mínimo de estudiantes para que una sección siga aperturada (de 30 a 25), logrando que se reduzca el número de secciones cerradas y permitiendo que +300 estudiantes puedan seguir en con su avance académico.",
     color: "blue",
   
   },
