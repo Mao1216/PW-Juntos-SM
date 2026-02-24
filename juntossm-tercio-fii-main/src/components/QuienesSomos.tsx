@@ -5,12 +5,12 @@ const valores = [
   {
     icon: Users,
     title: "Representación",
-    desc: "Cada estudiante de la FII tiene voz en nuestro tercio. Actuamos como mandato, no como favor.",
+    desc: "Cada estudiante de la FII tiene voz en nuestro tercio.",
   },
   {
     icon: Shield,
     title: "Transparencia",
-    desc: "Gestión abierta, rendición de cuentas periódica y acceso a información sin intermediarios.",
+    desc: "Gestión abierta, decisiones firmes y valores inquebrantables.",
   },
   {
     icon: Users,
@@ -25,7 +25,7 @@ const valores = [
   {
     icon: Target,
     title: "Compromiso",
-    desc: "Asumimos responsabilidades concretas y las sostenemos hasta su cumplimiento efectivo.",
+    desc: "Distintos estudiantes se suman a nuestro programa de voluntarios para participar en las comisiones internas del partido.",
   },
   {
     icon: Lightbulb,
