@@ -12,14 +12,14 @@ const team = [
   {
     name: "Diana Silva",
     role: "Consejera de Facultad FII",
-    desc: "Representante estudiantil y de Juntos SM. Estudiante de la EPITC B23",
+    desc: "Representante estudiantil y cofundadora de Juntos SM. Estudiante de la EPITC B23",
     initials: "CM",
     color: "green",
   },
   {
     name: "Jordan Tapullima",
     role: "Consejero de Facultad FII",
-    desc: "Representante estudiantil y de Juntos SM. Estudiante de la EPISST B24",
+    desc: "Representante estudiantil. Estudiante de la EPISST B24",
     initials: "VT",
     color: "blue",
   },
@@ -52,7 +52,7 @@ const team = [
     color: "blue",
   },
   {
-    name: "Dora",
+    name: "X",
     role: "Miembro del comité ejecutivo",
     desc: "Gerente de finanzas y logística de Juntos SM. Estudiante de la EPISST B24.",
     initials: "MR",

@@ -198,21 +198,14 @@ const timeline = [
   },
  
     {
-    date: "En curso",
+    
     icon: CheckCircle2,
     title: "Todos con matrícula!",
     desc: "1ra vez que gracias a nuestra gestión, se logra matricular en verano a los estudiantes que dieron examen de aplazados en ciclo regular, beneficiando y apoyando a +50 estudiantes. Recuerden, no están solos, estamos SiempreJuntos",
     color: "blue",
     active: true,
   },
-    {
-    date: "En curso",
-    icon: BookOpen,
-    title: "Inglés para egresados",
-    desc: "Se apoyó y gestionó el dictado de inglés intermedio para los egresados de nuestra facultad y de esta forma mejorar sus competencias laborales ya académicas. Siempre Juntos, hasta de egresados.",
-    color: "green",
-    active: true,
-  },
+
      {
     date: "En curso",
     icon: TrendingUp,
