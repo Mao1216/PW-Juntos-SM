@@ -14,11 +14,7 @@ return (
   <div className="min-h-screen">
     <Navbar />
     <main>
-      
-      <h1 className="text-3xl font-bold text-center mt-6">
-        Juntos SM - Tercio Estudiantil FII UNMSM
-      </h1>
-
+  
       <HeroSection />
       <QuienesSomos />
       <Propuestas />
