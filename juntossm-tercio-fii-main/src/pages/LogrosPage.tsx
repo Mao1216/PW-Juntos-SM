@@ -121,14 +121,7 @@ const timeline = [
     color: "blue",
   
   },
-    {
 
-    icon: Calendar,
-    title: "Entrega de notas",
-    desc: "Gracias a nuestra intervención en consejo de facultad, se logró crear un inciso en los lineamientos del dictado de clases 2025-II. De esta forma se estableció un primer cronograma de entrega de notas para que los docentes otorgen, obligatoriamente, las notas a los estudiantes en fechas oportunas. Este era un problema muy recurrente en la facultad que perjudicaba directamente a los estudiantes al no saber su situación académica hasta finalizado el curso",
-    color: "green",
- 
-  },
     {
   
     icon: CheckCircle2,
@@ -196,15 +189,6 @@ const timeline = [
     color: "green",
     active: true,
   },
- 
-    {
-    
-    icon: CheckCircle2,
-    title: "Todos con matrícula!",
-    desc: "1ra vez que gracias a nuestra gestión, se logra matricular en verano a los estudiantes que dieron examen de aplazados en ciclo regular, beneficiando y apoyando a +50 estudiantes. Recuerden, no están solos, estamos SiempreJuntos",
-    color: "blue",
-    active: true,
-  },
 
      {
     date: "En curso",
@@ -229,6 +213,14 @@ const timeline = [
     desc: "Se ha iniciado gracias a la gestión del ing. Vidal y nuestra consejera Diana Silva, el mantenimiento de los equipos de los laboratorios después de muchos años de abandono.",
     color: "blue",
     active: true,
+  },
+
+      {
+    icon: Calendar,
+    title: "Entrega de notas",
+    desc: "Gracias a nuestra intervención en consejo de facultad, se logró crear un nuevo artículo en los lineamientos del dictado de clases 2026-I. De esta forma se estableció un primer cronograma de entrega de notas para que los docentes otorgen, obligatoriamente, las notas a los estudiantes en fechas oportunas. Este era un problema muy recurrente en la facultad que perjudicaba directamente a los estudiantes al no saber su situación académica hasta finalizado el curso",
+    color: "green",
+ 
   },
 
 ];

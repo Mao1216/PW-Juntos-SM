@@ -91,13 +91,6 @@ const Logros = () => {
           <p className="font-body text-muted-foreground text-lg leading-relaxed scroll-animate scroll-animate-delay-2 mb-6">
             Lo que prometemos, lo cumplimos. Aquí está el registro de nuestra gestión con resultados concretos. Les presentamos algunos de nuestros logros:
           </p>
-          <a
-            href="/logros"
-            className="inline-flex items-center gap-2 font-display font-semibold text-sm text-primary hover:text-secondary transition-colors scroll-animate scroll-animate-delay-2 group"
-          >
-            Ver todos nuestros logros
-            <ChevronRight className="w-4 h-4 group-hover:translate-x-0.5 transition-transform" />
-          </a>
         </div>
 
         {/* Stats */}
@@ -117,7 +110,6 @@ const Logros = () => {
 
         {/* Timeline */}
         <div className="relative">
-          {/* Vertical line */}
           <div
             className="absolute left-6 lg:left-1/2 top-0 bottom-0 w-px hidden sm:block"
             style={{ background: "linear-gradient(to bottom, hsl(163 68% 32% / 0.3), hsl(218 72% 22% / 0.3))" }}
@@ -131,7 +123,6 @@ const Logros = () => {
                   key={item.title}
                   className={`scroll-animate scroll-animate-delay-${(i % 3) + 1} relative sm:flex ${isLeft ? "sm:flex-row" : "sm:flex-row-reverse"} items-center gap-8`}
                 >
-                  {/* Content card */}
                   <div className={`flex-1 ${isLeft ? "lg:text-right" : "lg:text-left"}`}>
                     <div
                       className={`inline-block bg-card border rounded-2xl p-6 shadow-brand hover:shadow-brand-lg transition-shadow duration-300 text-left max-w-md ${
@@ -160,7 +151,6 @@ const Logros = () => {
                     </div>
                   </div>
 
-                  {/* Center icon */}
                   <div
                     className={`shrink-0 w-12 h-12 rounded-full border-4 border-background flex items-center justify-center z-10 ${
                       item.color === "green" ? "gradient-accent shadow-green" : "gradient-primary"
@@ -169,12 +159,22 @@ const Logros = () => {
                     <item.icon className="w-5 h-5 text-primary-foreground" />
                   </div>
 
-                  {/* Spacer for alternating layout */}
                   <div className="flex-1 hidden lg:block" />
                 </div>
               );
             })}
           </div>
+        </div>
+
+        {/* BOTÓN FINAL */}
+        <div className="mt-20 text-center">
+          <a
+            href="/logros"
+            className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-primary text-white font-display font-semibold shadow-brand hover:shadow-brand-lg hover:-translate-y-0.5 transition-all duration-300 group"
+          >
+            Ver todos nuestros logros
+            <ChevronRight className="w-4 h-4 group-hover:translate-x-0.5 transition-transform" />
+          </a>
         </div>
       </div>
     </section>

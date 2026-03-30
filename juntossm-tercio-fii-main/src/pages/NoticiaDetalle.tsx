@@ -47,22 +47,19 @@ Este ranking busca informar la situación académica de los estudiantes, y tambi
 
 **Horarios EPII:**
 
-- Plan 2018: 
-- Plan 2023: 
+ https://drive.google.com/file/d/1HSVwvMTRbJaMEsFTn2ESThgNo8CaWSqw/view?usp=sharing 
 
 **Horarios EPITC:**
 
-- Plan 2018: 
-- Plan 2023: 
+ https://drive.google.com/file/d/1Y9QavjbJjGuh7yLc6DiSYvRUg0wxSz1E/view?usp=sharing 
 
 **Horarios EPISST:**
 
-- Plan 2018: 
-- Plan 2023: 
+ https://drive.google.com/file/d/1chcH_9q32l89_XeJLPR8TnH3igYotXot/view?usp=sharing 
 
 **Horarios EEGG:**
 
-- Plan 2026: 
+ https://drive.google.com/file/d/1FDTpmsfoWoPn5x5-uA3C9-N3uVncigCE/view?usp=sharing
 
 `,
     readTime: "4 min de lectura",

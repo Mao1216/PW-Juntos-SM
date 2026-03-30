@@ -44,7 +44,7 @@ const categories = [
       { title: "Aire acondicionado", desc: "Proponer la implementación de aire acondicionado." },
       { title: "Zonas de descanso", desc: "Gestionar y encaminar zonas de descanso para estudiantes." },
       { title: "Rectificación de matrícula", desc: "Proponer mejoras para la rectificación de matrícula." },
-      { title: "Casilleros", desc: "Dar mantenimiento a los casilleros y por ende, poneqqqqr más a disposición de los estudiantes." },
+      { title: "Casilleros", desc: "Dar mantenimiento a los casilleros y por ende, poner más a disposición de los estudiantes." },
     ],
   },
   {
