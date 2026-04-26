@@ -248,6 +248,15 @@ const timeline = [
  
   },
 
+        {
+    date: "En curso",
+    icon: TrendingUp,
+    title: "Inglés para egresados",
+    desc: "Gracias a la gestión conjunta de nuestro tercio y la escuela de Ingeniería Textil, se ha establecido el programa de inglés para egresados, lo que permitirá que nuestros egresados puedan certificarse en inglés intermedio y ser más competentes en el mercado laboral. Siempre Juntos, hasta de egresados.",
+    color: "blue",
+    active: true,
+  },
+
 ];
 
 const stats = [
