@@ -52,10 +52,10 @@ const team = [
     color: "blue",
   },
   {
-    name: "X",
+    name: "Tania Nuñuvero",
     role: "Miembro del comité ejecutivo",
-    desc: "Gerente de finanzas y logística de Juntos SM. Estudiante de la EPISST B24.",
-    initials: "X",
+    desc: "Gerente de finanzas y logística de Juntos SM. Estudiante de la EPISST B23.",
+    initials: "TN",
     color: "green",
   },
   {
@@ -63,6 +63,13 @@ const team = [
     role: "Miembro del comité ejecutivo",
     desc: "Gerente de Marketing y comunicaciones de Juntos SM. Estudiante de la EPII B23.",
     initials: "KM",
+    color: "blue",
+  },
+    {
+    name: "Gianella Navarro",
+    role: "Miembro del comité ejecutivo",
+    desc: "Gerente de Marketing y comunicaciones de Juntos SM. Estudiante de la EPII B23.",
+    initials: "GN",
     color: "green",
   },
 ];
