@@ -1,4 +1,4 @@
-import { CheckCircle2, Calendar, Users, Award, TrendingUp, FileCheck, ArrowLeft, Target, Briefcase, BookOpen } from "lucide-react";
+import { CheckCircle2, Calendar, Users, Award, TrendingUp, FileCheck, ArrowLeft, Target, Briefcase, BookOpen, Users2Icon } from "lucide-react";
 import { Link } from "react-router-dom";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
@@ -49,7 +49,7 @@ const timeline = [
  
     icon: TrendingUp,
     title: "Mejor biblioteca + wifi",
-    desc: "Mejoramiento de la conectividades de la biblioteca de la facultad incrementando el ancho de banda y ampliando la capacidad de usuarios conectados.",
+    desc: "Gracias a nuestra gestión se hizo el mejoramiento de la conectividad wifi de la biblioteca de la facultad incrementando el ancho de banda y ampliando la capacidad de usuarios conectados.",
     color: "green",
   },
   {
@@ -94,7 +94,7 @@ const timeline = [
     
     icon: Users,
     title: "Burrito CONEII PIURA 2025",
-    desc: "Por 1ra vez en nuestra facultad se gestiona el apoyo para que +45 estudiantes puedan ir a costo económico al Congreso Nacional de estudiantes de Ingeniería Industrial, logrando una representación grande de estudiantes.",
+    desc: "Por 1ra vez en nuestra facultad, gracias a nuestra gestión, se logra el apoyo para que +45 estudiantes puedan ir a costo económico al Congreso Nacional de estudiantes de Ingeniería Industrial, logrando una representación y bienestar de estudiantes.",
     color: "green",
   },
     {
@@ -133,7 +133,7 @@ const timeline = [
     {
    
     icon: Users,
-    title: "Juntos en la matrícula y rectificación",
+    title: "Juntos en la matrícula y rectificación 2025-II",
     desc: "Apoyo constante y orientación a +900 estudiantes de las 3 escuelas en los procesos de matrícula y rectificación. Se logró aperturar cursos e incrementar vacantes en el ciclo regular, apoyando a los estudiantes de todas las bases.",
     color: "green",
     
@@ -223,12 +223,37 @@ const timeline = [
  
   },
 
+        {
+    icon: Users,
+    title: "Directiva Tacha docente",
+    desc: "Gracias a nuestra propuesta en consejo de facultad, se logró crear una comisión encargadar de abordar una directiva de aplicación de la tacha docente, derecho del estudiante para el control de la calidad académica y buen trato docente.",
+    color: "green",
+ 
+  },
+
+        {
+    icon: Users,
+    title: "Mejoramiento de tutoría por pares",
+    desc: "Gracias a nuestra intervención en consejo de facultad, se logró crear una comisión encargada de mejorar nuestra propuesta de Tutoría por Pares (Reforzamiento de estudiante a estudiante).",
+    color: "green",
+ 
+  },
+
+        {
+    Date: "En curso",
+    icon: Calendar,
+    title: "Aire Acondicionado",
+    desc: "Gracias a nuestra gestión, se ha iniciado el tramite para asignar el presupuesto para el verano del siguiente año y lograr la implementación de aire acondicionado en las aulas de la FII",
+    color: "green",
+ 
+  },
+
 ];
 
 const stats = [
   { value: "+20", label: "Propuestas ejecutadas" },
   { value: "+50", label: "Miembros" },
-  { value: "1", label: "Convenios gestionados" },
+  { value: "1", label: "Convenios en proceso" },
   { value: "100%", label: "Siempre Juntos" },
 ];
 
