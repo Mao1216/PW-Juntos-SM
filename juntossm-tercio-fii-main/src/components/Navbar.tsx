@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { Menu, X, ChevronRight } from "lucide-react";
+import AdminAccess from "@/components/AdminAccess";
 import juntoslogo from "@/assets/JUNTOS_LOGO.png";
 const navLinks = [
   { label: "Inicio", href: "/#inicio" },
@@ -71,6 +72,7 @@ const Navbar = () => {
             Únete al Equipo
             <ChevronRight className="w-4 h-4 group-hover:translate-x-0.5 transition-transform" />
           </a>
+          <AdminAccess />
         </div>
 
         {/* Mobile Menu Button */}
@@ -105,6 +107,7 @@ const Navbar = () => {
           >
             Únete al Equipo
           </a>
+          <AdminAccess />
         </div>
       )}
     </nav>
