@@ -1,5 +1,6 @@
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import { User, LinkedinIcon } from "lucide-react";
+import { getPublicContent } from "@/lib/supabase";
 
 const team = [
   {
@@ -76,6 +77,9 @@ const team = [
 
 const Equipo = () => {
   const sectionRef = useRef<HTMLDivElement>(null);
+  const [members, setMembers] = useState(team);
+
+  useEffect(() => { getPublicContent("equipo", team).then(setMembers); }, []);
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -111,7 +115,7 @@ const Equipo = () => {
 
         {/* Team Grid */}
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-7">
-          {team.map((member, i) => (
+          {members.map((member, i) => (
             <div
               key={member.name}
               className={`scroll-animate scroll-animate-delay-${(i % 4) + 1} group bg-card rounded-2xl border border-border hover:border-secondary/40 hover:shadow-brand-lg transition-all duration-300 overflow-hidden shadow-brand`}

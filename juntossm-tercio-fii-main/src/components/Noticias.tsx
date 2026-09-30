@@ -1,6 +1,7 @@
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import { Calendar, ArrowRight } from "lucide-react";
 import { useNavigate } from "react-router-dom";
+import { getPublicContent } from "@/lib/supabase";
 
 const news = [
   {
@@ -50,6 +51,9 @@ const tagColorMap = {
 const Noticias = () => {
   const sectionRef = useRef<HTMLDivElement>(null);
   const navigate = useNavigate();
+  const [articles, setArticles] = useState(news);
+
+  useEffect(() => { getPublicContent("noticias", news).then(setArticles); }, []);
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -68,7 +72,7 @@ const Noticias = () => {
     return () => observer.disconnect();
   }, []);
 
-  const [featured, ...rest] = news;
+  const [featured, ...rest] = articles;
 
   return (
     <section id="noticias" ref={sectionRef} className="py-24 lg:py-32 bg-background">

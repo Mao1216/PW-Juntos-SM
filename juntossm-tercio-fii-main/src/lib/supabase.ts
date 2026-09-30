@@ -14,3 +14,13 @@ export async function signInAdmin(password: string) {
   if (!response.ok) throw new Error(data.error_description || data.msg || "Credenciales incorrectas");
   return data;
 }
+
+export async function getPublicContent<T>(key: string, fallback: T): Promise<T> {
+  if (!supabaseUrl || !supabaseAnonKey) return fallback;
+  try {
+    const response = await fetch(`${supabaseUrl}/rest/v1/site_content?key=eq.${encodeURIComponent(key)}&select=value`, { headers: { apikey: supabaseAnonKey } });
+    if (!response.ok) return fallback;
+    const rows = await response.json();
+    return rows[0]?.value ?? fallback;
+  } catch { return fallback; }
+}

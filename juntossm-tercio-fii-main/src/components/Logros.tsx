@@ -1,5 +1,6 @@
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import { CheckCircle2, Calendar, Users, Award, TrendingUp, FileCheck, ChevronRight } from "lucide-react";
+import { getPublicContent } from "@/lib/supabase";
 
 const timeline = [
   {
@@ -56,6 +57,9 @@ const stats = [
 
 const Logros = () => {
   const sectionRef = useRef<HTMLDivElement>(null);
+  const [achievements, setAchievements] = useState(timeline);
+
+  useEffect(() => { getPublicContent("logros", timeline).then(setAchievements); }, []);
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -116,7 +120,7 @@ const Logros = () => {
           />
 
           <div className="flex flex-col gap-10">
-            {timeline.map((item, i) => {
+            {achievements.map((item, i) => {
               const isLeft = i % 2 === 0;
               return (
                 <div
