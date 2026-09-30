@@ -24,3 +24,11 @@ export async function getPublicContent<T>(key: string, fallback: T): Promise<T> 
     return rows[0]?.value ?? fallback;
   } catch { return fallback; }
 }
+
+export async function saveAdminContent(key: string, value: unknown) {
+  if (!supabaseUrl || !supabaseAnonKey) throw new Error("Supabase no está configurado");
+  const token = JSON.parse(sessionStorage.getItem("juntos_admin_session") || "null")?.access_token;
+  if (!token) throw new Error("Sesión de administrador expirada");
+  const response = await fetch(`${supabaseUrl}/rest/v1/site_content`, { method: "POST", headers: { apikey: supabaseAnonKey, Authorization: `Bearer ${token}`, "Content-Type": "application/json", Prefer: "resolution=merge-duplicates,return=minimal" }, body: JSON.stringify({ key, value, updated_at: new Date().toISOString() }) });
+  if (!response.ok) throw new Error(await response.text());
+}

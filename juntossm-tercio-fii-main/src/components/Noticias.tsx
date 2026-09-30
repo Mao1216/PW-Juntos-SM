@@ -3,7 +3,7 @@ import { Calendar, ArrowRight } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 import { getPublicContent } from "@/lib/supabase";
 
-const news = [
+export const news = [
   {
     slug: "Horarios 2026-1",
     tag: "Académico",

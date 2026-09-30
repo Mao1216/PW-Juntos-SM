@@ -1,40 +1,32 @@
 import { useEffect, useState } from "react";
+import { Plus, Save, Trash2, LogOut, Pencil } from "lucide-react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import HeroSection from "@/components/HeroSection";
+import QuienesSomos from "@/components/QuienesSomos";
+import Propuestas from "@/components/Propuestas";
+import Contacto from "@/components/Contacto";
+import { getPublicContent, saveAdminContent } from "@/lib/supabase";
+import { news as defaultNews } from "@/components/Noticias";
+import { team as defaultTeam } from "@/components/Equipo";
+import { timeline as defaultTimeline } from "@/components/Logros";
 
-const api = () => ({
-  url: import.meta.env.VITE_SUPABASE_URL as string,
-  key: import.meta.env.VITE_SUPABASE_ANON_KEY as string,
-  token: JSON.parse(sessionStorage.getItem("juntos_admin_session") || "null")?.access_token,
-});
+type NewsItem = { slug:string; tag:string; tagColor:string; date:string; title:string; desc:string; readTime:string };
+type TeamItem = { name:string; role:string; desc:string; initials:string; color:string };
+type Achievement = { date?:string; title:string; desc:string; color:string; active?:boolean };
+type Info = { about:string; mission:string; vision:string };
+const newNews=():NewsItem=>({slug:"nuevo-comunicado",tag:"Información",tagColor:"blue",date:"",title:"Nuevo comunicado",desc:"Escribe aquí el contenido.",readTime:""});
+const newTeam=():TeamItem=>({name:"Nuevo integrante",role:"Cargo",desc:"Descripción del integrante.",initials:"NI",color:"blue"});
+const newAchievement=():Achievement=>({date:"En curso",title:"Nuevo logro",desc:"Describe el logro.",color:"green"});
+const Field=({label,value,onChange,multi=false}:{label:string;value:string;onChange:(v:string)=>void;multi?:boolean})=>{const E=multi?"textarea":"input";return <label className="block text-sm font-semibold"><span>{label}</span><E value={value||""} onChange={e=>onChange(e.target.value)} rows={multi?4:undefined} className="mt-1 w-full rounded-lg border bg-background px-3 py-2 font-normal"/></label>};
+const Header=({title,add}:{title:string;add:()=>void})=><div className="mb-6 flex items-center justify-between"><h2 className="font-display text-2xl font-black">{title}</h2><button onClick={add} className="inline-flex items-center gap-2 rounded-lg bg-secondary px-4 py-2 text-sm font-semibold text-white"><Plus className="h-4 w-4"/>Añadir</button></div>;
 
-const AdminPage = () => {
-  const [keyName, setKeyName] = useState("noticias");
-  const [json, setJson] = useState("[]");
-  const [message, setMessage] = useState("");
-
-  useEffect(() => {
-    const load = async () => {
-      const { url, key, token } = api();
-      if (!token) { window.location.href = "/"; return; }
-      const response = await fetch(`${url}/rest/v1/site_content?key=eq.${encodeURIComponent(keyName)}&select=value`, { headers: { apikey: key, Authorization: `Bearer ${token}` } });
-      const rows = await response.json();
-      if (rows[0]) setJson(JSON.stringify(rows[0].value, null, 2));
-    };
-    load();
-  }, [keyName]);
-
-  const save = async () => {
-    try {
-      const value = JSON.parse(json);
-      const { url, key, token } = api();
-      const response = await fetch(`${url}/rest/v1/site_content`, { method: "POST", headers: { apikey: key, Authorization: `Bearer ${token}`, "Content-Type": "application/json", Prefer: "resolution=merge-duplicates" }, body: JSON.stringify({ key: keyName, value, updated_at: new Date().toISOString() }) });
-      if (!response.ok) throw new Error(await response.text());
-      setMessage("Contenido guardado correctamente.");
-    } catch (error) { setMessage(error instanceof Error ? error.message : "JSON inválido"); }
-  };
-
-  return <div className="min-h-screen"><Navbar /><main className="pt-32 pb-24 container max-w-5xl mx-auto px-6"><div className="flex items-center justify-between mb-8"><div><p className="section-label mb-3">Administración</p><h1 className="font-display font-black text-4xl">Editar contenido</h1></div><button onClick={() => { sessionStorage.removeItem("juntos_admin_session"); window.location.href = "/"; }} className="rounded-lg border px-4 py-2">Cerrar sesión</button></div><div className="bg-card border rounded-2xl p-6 space-y-5"><label className="block font-semibold">Sección<select value={keyName} onChange={e => setKeyName(e.target.value)} className="mt-2 w-full rounded-lg border bg-background px-3 py-2"><option value="noticias">Noticias</option><option value="logros">Logros</option><option value="equipo">Integrantes</option><option value="informacion">Información general</option></select></label><label className="block font-semibold">Contenido (JSON)<textarea value={json} onChange={e => setJson(e.target.value)} rows={20} className="mt-2 w-full rounded-lg border bg-background p-3 font-mono text-sm" /></label><button onClick={save} className="rounded-lg bg-primary text-primary-foreground px-5 py-2.5 font-semibold">Guardar cambios</button>{message && <p className="text-sm text-secondary">{message}</p>}</div></main><Footer /></div>;
+const AdminPage=()=>{
+ const [news,setNews]=useState<NewsItem[]>(defaultNews as NewsItem[]),[team,setTeam]=useState<TeamItem[]>(defaultTeam as TeamItem[]),[achievements,setAchievements]=useState<Achievement[]>(defaultTimeline as Achievement[]),[info,setInfo]=useState<Info>({about:"",mission:"",vision:""}),[message,setMessage]=useState("");
+ useEffect(()=>{if(!sessionStorage.getItem("juntos_admin_session")){location.replace("/");return;} Promise.all([getPublicContent("noticias",defaultNews),getPublicContent("equipo",defaultTeam),getPublicContent("logros",defaultTimeline),getPublicContent<Info>("informacion",{about:"",mission:"",vision:""})]).then(([n,t,a,i])=>{setNews(n as NewsItem[]);setTeam(t as TeamItem[]);setAchievements(a as Achievement[]);setInfo(i)});},[]);
+ const save=async()=>{try{await Promise.all([saveAdminContent("noticias",news),saveAdminContent("equipo",team),saveAdminContent("logros",achievements),saveAdminContent("informacion",info)]);setMessage("Cambios guardados y visibles públicamente.")}catch(e){setMessage(e instanceof Error?e.message:"No se pudieron guardar los cambios")}};
+ const update=<T,>(setter:React.Dispatch<React.SetStateAction<T[]>>,i:number,v:Partial<T>)=>setter(xs=>xs.map((x,n)=>n===i?{...x,...v}:x));
+ const remove=<T,>(setter:React.Dispatch<React.SetStateAction<T[]>>,i:number)=>setter(xs=>xs.filter((_,n)=>n!==i));
+ return <div className="min-h-screen bg-background"><Navbar/><div className="fixed top-20 left-0 right-0 z-40 bg-secondary text-white shadow-lg"><div className="container mx-auto flex max-w-7xl items-center justify-between px-6 py-3"><span className="flex items-center gap-2 font-display font-bold"><Pencil className="h-4 w-4"/>Modo administrador</span><div className="flex gap-2"><button onClick={save} className="inline-flex items-center gap-2 rounded-lg bg-white px-4 py-2 text-sm font-bold text-secondary"><Save className="h-4 w-4"/>Guardar todo</button><button onClick={()=>{sessionStorage.removeItem("juntos_admin_session");location.replace("/")}} className="inline-flex items-center gap-2 rounded-lg border border-white/40 px-3 py-2 text-sm"><LogOut className="h-4 w-4"/>Salir</button></div></div></div><main className="pt-40"><HeroSection/><QuienesSomos/><Propuestas/><section className="bg-background py-20"><div className="container mx-auto max-w-7xl px-6"><Header title="Noticias y comunicados" add={()=>setNews(x=>[...x,newNews()])}/><div className="grid gap-6 md:grid-cols-2">{news.map((x,i)=><article key={i} className="space-y-3 rounded-2xl border border-secondary/40 bg-card p-6"><div className="flex justify-between"><b className="text-xs text-secondary">EDITAR NOTICIA</b><button onClick={()=>remove(setNews,i)} className="text-destructive"><Trash2 className="h-4 w-4"/></button></div><Field label="Título" value={x.title} onChange={v=>update(setNews,i,{title:v})}/><Field label="Descripción" value={x.desc} onChange={v=>update(setNews,i,{desc:v})} multi/><div className="grid grid-cols-2 gap-3"><Field label="Etiqueta" value={x.tag} onChange={v=>update(setNews,i,{tag:v})}/><Field label="Fecha" value={x.date} onChange={v=>update(setNews,i,{date:v})}/></div></article>)}</div></div></section><section className="py-20" style={{background:"hsl(218 30% 97%)"}}><div className="container mx-auto max-w-7xl px-6"><Header title="Logros y resultados" add={()=>setAchievements(x=>[...x,newAchievement()])}/><div className="grid gap-6 md:grid-cols-2">{achievements.map((x,i)=><article key={i} className="space-y-3 rounded-2xl border border-secondary/40 bg-card p-6"><div className="flex justify-between"><b className="text-xs text-secondary">EDITAR LOGRO</b><button onClick={()=>remove(setAchievements,i)} className="text-destructive"><Trash2 className="h-4 w-4"/></button></div><Field label="Título" value={x.title} onChange={v=>update(setAchievements,i,{title:v})}/><Field label="Descripción" value={x.desc} onChange={v=>update(setAchievements,i,{desc:v})} multi/><Field label="Fecha" value={x.date||""} onChange={v=>update(setAchievements,i,{date:v})}/></article>)}</div></div></section><section className="bg-background py-20"><div className="container mx-auto max-w-7xl px-6"><Header title="Integrantes" add={()=>setTeam(x=>[...x,newTeam()])}/><div className="grid gap-6 md:grid-cols-3">{team.map((x,i)=><article key={i} className="space-y-3 rounded-2xl border border-secondary/40 bg-card p-6"><div className="flex justify-between"><b className="text-xs text-secondary">EDITAR INTEGRANTE</b><button onClick={()=>remove(setTeam,i)} className="text-destructive"><Trash2 className="h-4 w-4"/></button></div><Field label="Nombre" value={x.name} onChange={v=>update(setTeam,i,{name:v})}/><Field label="Cargo" value={x.role} onChange={v=>update(setTeam,i,{role:v})}/><Field label="Descripción" value={x.desc} onChange={v=>update(setTeam,i,{desc:v})} multi/></article>)}</div></div></section><section className="py-20" style={{background:"hsl(218 30% 97%)"}}><div className="container mx-auto max-w-4xl px-6"><Header title="Información general" add={()=>undefined}/><div className="space-y-4 rounded-2xl border border-secondary/40 bg-card p-6"><Field label="Quiénes somos" value={info.about} onChange={v=>setInfo({...info,about:v})} multi/><Field label="Misión" value={info.mission} onChange={v=>setInfo({...info,mission:v})} multi/><Field label="Visión" value={info.vision} onChange={v=>setInfo({...info,vision:v})} multi/></div></div></section><Contacto/></main><Footer/>{message&&<div className="fixed bottom-6 right-6 z-50 rounded-xl bg-primary px-5 py-3 text-sm text-white shadow-xl">{message}</div>}</div>;
 };
-
 export default AdminPage;

@@ -2,7 +2,7 @@ import { useEffect, useRef, useState } from "react";
 import { CheckCircle2, Calendar, Users, Award, TrendingUp, FileCheck, ChevronRight } from "lucide-react";
 import { getPublicContent } from "@/lib/supabase";
 
-const timeline = [
+export const timeline = [
   {
     date: "May 2025",
     icon: Award,

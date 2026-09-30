@@ -2,7 +2,7 @@ import { useEffect, useRef, useState } from "react";
 import { User, LinkedinIcon } from "lucide-react";
 import { getPublicContent } from "@/lib/supabase";
 
-const team = [
+export const team = [
   {
     name: "Manuel Olin",
     role: "Consejero de Facultad FII",
